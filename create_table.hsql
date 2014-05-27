@@ -1,0 +1,10 @@
+DROP TABLE twitter_data;
+CREATE EXTERNAL TABLE twitter_data (
+    user map<STRING, STRING>,
+    tweetmessage STRING,
+    createddate STRING,
+    geolocation INT
+)
+ROW FORMAT SERDE 'org.apache.hcatalog.data.JsonSerDe'
+STORED AS TEXTFILE
+LOCATION '/data/twitter';
