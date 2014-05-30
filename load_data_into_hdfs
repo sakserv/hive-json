@@ -6,4 +6,4 @@ SCRIPT_NAME=`basename $0`
 SCRIPT_DIR=`cd $(dirname $0) && pwd`
 
 sudo -u hdfs hdfs dfs -mkdir -p /data/twitter
-sudo -u hdfs hdfs dfs -put $SCRIPT_DIR/sample_twitter_data.txt
+sudo -u hdfs hdfs dfs -put $SCRIPT_DIR/sample_twitter_data.txt /data/twitter
